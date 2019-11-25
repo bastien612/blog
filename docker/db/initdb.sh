@@ -1,0 +1,3 @@
+#!/bin/sh
+
+psql -U ${POSTGRES_USER} -d ${POSTGRES_DB} -c "CREATE USER ${APP_USER-check} WITH ENCRYPTED PASSWORD '${APP_PASSWORD-check}';"
