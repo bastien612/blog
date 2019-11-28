@@ -1,19 +1,18 @@
 version: "3"
 
 services:
-  server:
-    build:
-      context: ../../nginx
-    depends_on:
-      - db
+  wordpress:
+    image: wordpress
     ports:
-      - 8080:8080
-    volumes:
-      # - ../../nginx/conf/nginx.conf:/etc/nginx/nginx.conf
-      - ../../nginx/log:/var/log/nginx
-      - ../../../Wordpress:/var/www/
+      - 8080:80
     environment:
-      - WAIT_HOSTS=db:3306
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: app
+      WORDPRESS_DB_PASSWORD: app
+      WORDPRESS_DB_NAME: blog
+    volumes:
+      - wordpress:/var/www/html
+      - ../../../test:/test
 
   db:
     build:
@@ -36,3 +35,4 @@ services:
 
 volumes:
   db-data:
+  wordpress:
