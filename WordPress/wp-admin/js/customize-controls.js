@@ -1152,8 +1152,8 @@
 		/**
 		 * @since 4.1.0
 		 *
-		 * @param {Boolean} active
-		 * @param {Object}  [params]
+		 * @params {Boolean} active
+		 * @param {Object}   [params]
 		 * @returns {Boolean} false if state already applied
 		 */
 		_toggleActive: function ( active, params ) {
@@ -3500,7 +3500,7 @@
 			control.params = _.extend(
 				{},
 				control.defaults,
-				control.params || {}, // In case subclass already defines.
+				control.params || {}, // In case sub-class already defines.
 				options.params || options || {} // The options.params property is deprecated, but it is checked first for back-compat.
 			);
 

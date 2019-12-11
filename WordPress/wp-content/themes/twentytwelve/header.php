@@ -50,7 +50,8 @@
 					'menu_class'     => 'nav-menu',
 				)
 			);
-			?>
+    ?>
+   
 		</nav><!-- #site-navigation -->
 
 		<?php if ( get_header_image() ) : ?>

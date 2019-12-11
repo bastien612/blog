@@ -758,7 +758,7 @@ endif; //!IS_PROFILE_PAGE
 					}
 
 					if ( $value ) {
-						$output .= $cap;
+						$output .= $value;
 					} else {
 						/* translators: %s: Capability name. */
 						$output .= sprintf( __( 'Denied: %s' ), $cap );

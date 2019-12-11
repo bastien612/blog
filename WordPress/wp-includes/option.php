@@ -189,19 +189,16 @@ function form_option( $option ) {
  * Loads and caches all autoloaded options, if available or all options.
  *
  * @since 2.2.0
- * @since 5.3.1 The `$force_cache` parameter was added.
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param bool $force_cache Optional. Whether to force an update of the local cache
- *                          from the persistent cache. Default false.
  * @return array List of all options.
  */
-function wp_load_alloptions( $force_cache = false ) {
+function wp_load_alloptions() {
 	global $wpdb;
 
 	if ( ! wp_installing() || ! is_multisite() ) {
-		$alloptions = wp_cache_get( 'alloptions', 'options', $force_cache );
+		$alloptions = wp_cache_get( 'alloptions', 'options' );
 	} else {
 		$alloptions = false;
 	}
@@ -400,7 +397,7 @@ function update_option( $option, $value, $autoload = null ) {
 	}
 
 	if ( ! wp_installing() ) {
-		$alloptions = wp_load_alloptions( true );
+		$alloptions = wp_load_alloptions();
 		if ( isset( $alloptions[ $option ] ) ) {
 			$alloptions[ $option ] = $serialized_value;
 			wp_cache_set( 'alloptions', $alloptions, 'options' );
@@ -508,7 +505,7 @@ function add_option( $option, $value = '', $deprecated = '', $autoload = 'yes' )
 
 	if ( ! wp_installing() ) {
 		if ( 'yes' == $autoload ) {
-			$alloptions            = wp_load_alloptions( true );
+			$alloptions            = wp_load_alloptions();
 			$alloptions[ $option ] = $serialized_value;
 			wp_cache_set( 'alloptions', $alloptions, 'options' );
 		} else {
@@ -586,7 +583,7 @@ function delete_option( $option ) {
 	$result = $wpdb->delete( $wpdb->options, array( 'option_name' => $option ) );
 	if ( ! wp_installing() ) {
 		if ( 'yes' == $row->autoload ) {
-			$alloptions = wp_load_alloptions( true );
+			$alloptions = wp_load_alloptions();
 			if ( is_array( $alloptions ) && isset( $alloptions[ $option ] ) ) {
 				unset( $alloptions[ $option ] );
 				wp_cache_set( 'alloptions', $alloptions, 'options' );
