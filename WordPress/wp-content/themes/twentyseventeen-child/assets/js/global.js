@@ -79,17 +79,14 @@
         }
 
         // If the scroll is more than the custom header, set the fixed class.
-        console.log("$( window ).scrollTop() :", $(window).scrollTop());
-        console.log("headerOffset :", headerOffset);
-
-        if ($(window).scrollTop() >= headerOffset) {
-          $navigation.addClass(navigationFixedClass);
-        } else {
-          $navigation.removeClass(navigationFixedClass);
-        }
+        // if ($(window).scrollTop() >= headerOffset) {
+        //   $navigation.addClass(navigationFixedClass);
+        // } else {
+        //   $navigation.removeClass(navigationFixedClass);
+        // }
       } else {
         // Remove 'fixed' class if nav is taller than two rows.
-        $navigation.removeClass(navigationFixedClass);
+        // $navigation.removeClass(navigationFixedClass);
       }
     }
   }
