@@ -37,7 +37,7 @@
       <?php if (has_nav_menu('top')) : ?>
         <div class="navigation-top site-navigation-fixed">
           <div class="wrap">
-            <div>
+            <div style="display: flex;">
               <?php the_custom_logo(); ?>
               <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
             </div>
