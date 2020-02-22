@@ -13,3 +13,28 @@ Text Domain:  twentyseventeenchild
 .custom-logo-link img {
   max-height: 50px;
 }
+
+.call-to-action {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  max-width: 700px;
+  padding-left: 2em;
+  padding-right: 2em;
+  position: relative;
+  color: white;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  /*text-align: center;*/
+}
+
+.call-to-action h1 {
+  font-size: 3em;
+}
+
+.img-title {
+  display: block;
+}
+call-to-action-button {
+}

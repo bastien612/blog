@@ -1,3 +1,5 @@
 .DS_store
 __*
 **/wp-content/uploads
+WordPress/wp-content/plugins/
+WordPress/wp-content/themes/twentyseventeen/
