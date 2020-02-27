@@ -12,4 +12,13 @@ function my_theme_enqueue_styles()
         array($parent_style),
         wp_get_theme()->get('Version')
     );
+    error_log("LEEEEEET S DEBUG !!!!!!!!!!!!!!");
+
+    wp_enqueue_script(
+        'generative',
+        get_bloginfo('stylesheet_directory') . '/assets/js/generative-header.js',
+        array('jquery'),
+        '',
+        true
+    );
 }

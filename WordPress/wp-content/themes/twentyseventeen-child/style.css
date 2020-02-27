@@ -9,3 +9,9 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  twentyseventeenchild
 */
+
+#generative {
+  background-color: aqua;
+  height: 1200px;
+  width: 2000px;
+}
