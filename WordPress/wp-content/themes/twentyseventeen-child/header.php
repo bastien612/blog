@@ -34,16 +34,16 @@
 
       <?php if (has_nav_menu('top')) : ?>
         <div class="navigation-top site-navigation-fixed">
-          <div class="wrap">
+        <div class="wrap">
             <div style="display: flex;">
               <?php the_custom_logo(); ?>
               <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
-            </div>
+              </div>
           </div><!-- .wrap -->
         </div><!-- .navigation-top -->
       <?php endif; ?>
 
-      <?php get_template_part('template-parts/header/header', 'image'); ?>
+      <?php //get_template_part('template-parts/header/header', 'image'); ?>
 
     </header><!-- #masthead -->
 

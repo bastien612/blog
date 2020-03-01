@@ -65,7 +65,6 @@
     // Make sure we're not on a mobile screen.
     if ("none" === $menuToggle.css("display")) {
       // Make sure the nav isn't taller than two rows.
-      console.log("navIsNotTooTall :", navIsNotTooTall);
       if (navIsNotTooTall) {
         // When there's a custom header image or video, the header offset includes the height of the navigation.
         if (

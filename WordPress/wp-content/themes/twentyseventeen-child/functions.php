@@ -12,4 +12,12 @@ function my_theme_enqueue_styles()
         array($parent_style),
         wp_get_theme()->get('Version')
     );
+
+    wp_enqueue_script(
+      'custom',
+      get_bloginfo('stylesheet_directory') . '/assets/js/custom.js',
+      array('jquery'),
+      '',
+      true
+  );
 }

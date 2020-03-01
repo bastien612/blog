@@ -10,6 +10,39 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 Text Domain:  twentyseventeenchild
 */
+
+.selected-home-link a {
+  color: #58adaa !important;
+}
+.selected-action-link a {
+  color: #e26302 !important;
+}
+.selected-member-link a {
+  color: #3ab780 !important;
+}
+.selected-news-link a {
+  color: #58adaa !important;
+}
+.selected-contact-link a {
+  color: #e7ce00 !important;
+}
+
+.menu-home-link a:hover {
+  color: #58adaa !important;
+}
+.menu-action-link a:hover {
+  color: #e26302 !important;
+}
+.menu-member-link a:hover {
+  color: #3ab780 !important;
+}
+.menu-news-link a:hover {
+  color: #58adaa !important;
+}
+.menu-contact-link a:hover {
+  color: #e7ce00 !important;
+}
+
 .custom-logo-link img {
   max-height: 50px;
 }
@@ -35,6 +68,4 @@ Text Domain:  twentyseventeenchild
 
 .img-title {
   display: block;
-}
-call-to-action-button {
 }
