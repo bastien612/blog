@@ -11,13 +11,6 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 Text Domain:  twentyseventeenchild
 */
 
-/* .navigation-top a.custom-logo-link {
-  align: 
-} */
-
-/* footer h2.widget-title {
-  font-weight: bold;
-} */
 header {
   top: 86px;
 }
@@ -26,19 +19,29 @@ header {
   top: 86px;
 }
 .custom-header-media {
-  /* top: 86px; */
-  /* height: 2000px; */
+  /* background-image: url("http://localhost:8080/wp-content/uploads/2020/03/cropped-Bimers_home2-3.png");
+  background-size: contain;
+  background-repeat: no-repeat; */
+}
+.custom-header-media:before {
+  display: none;
 }
 
 .wp-custom-header {
   height: 100%;
 }
 
-.has-header-image .custom-header-media img {
-  /* background-size: cover; */
+.has-header-image .custom-header-media img,
+.has-header-video .custom-header-media video,
+.has-header-image:not(.twentyseventeen-front-page):not(.home)
+  .custom-header-media
+  img {
+  /* display: none; */
+  /* background-size: contain; */
+  object-fit: contain;
   position: relative;
-
-  /* height: calc(100% - 86px); */
+  /* height: auto; */
+  /* max-height: 100%; */
 }
 
 footer .widget li {
