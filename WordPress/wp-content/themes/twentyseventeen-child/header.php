@@ -32,6 +32,7 @@
 
     <header id="masthead" class="site-header" role="banner">
 
+      <?php get_template_part( 'template-parts/header/header', 'image' ); ?>
       <?php if (has_nav_menu('top')) : ?>
         <div class="navigation-top site-navigation-fixed">
         <div class="wrap">

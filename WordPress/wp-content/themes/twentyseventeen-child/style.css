@@ -1,4 +1,4 @@
-/*
+/* 
 Theme Name: Twenty Seventeen Child
 Author: Bastien Meunier
 Template: twentyseventeen
@@ -11,18 +11,75 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 Text Domain:  twentyseventeenchild
 */
 
+/* .navigation-top a.custom-logo-link {
+  align: 
+} */
+
+/* footer h2.widget-title {
+  font-weight: bold;
+} */
+header {
+  top: 86px;
+}
+
+.site-content-contain {
+  top: 86px;
+}
+.custom-header-media {
+  /* top: 86px; */
+  /* height: 2000px; */
+}
+
+.wp-custom-header {
+  height: 100%;
+}
+
+.has-header-image .custom-header-media img {
+  /* background-size: cover; */
+  position: relative;
+
+  /* height: calc(100% - 86px); */
+}
+
+footer .widget li {
+  border-bottom: none;
+  border-top: none;
+}
+
+footer .widget ul li a {
+  color: white;
+  box-shadow: unset !important;
+}
+
+footer h2.widget-title {
+  color: #999;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+#top-menu li {
+  font-size: large;
+}
+
 .selected-home-link a {
   color: #58adaa !important;
 }
+
 .selected-action-link a {
   color: #e26302 !important;
 }
+
 .selected-member-link a {
   color: #3ab780 !important;
 }
+
 .selected-news-link a {
   color: #58adaa !important;
 }
+
 .selected-contact-link a {
   color: #e7ce00 !important;
 }
@@ -30,15 +87,19 @@ Text Domain:  twentyseventeenchild
 .menu-home-link a:hover {
   color: #58adaa !important;
 }
+
 .menu-action-link a:hover {
   color: #e26302 !important;
 }
+
 .menu-member-link a:hover {
   color: #3ab780 !important;
 }
+
 .menu-news-link a:hover {
   color: #58adaa !important;
 }
+
 .menu-contact-link a:hover {
   color: #e7ce00 !important;
 }
@@ -47,7 +108,7 @@ Text Domain:  twentyseventeenchild
   max-height: 50px;
 }
 
-.call-to-action {
+/* .call-to-action {
   margin-left: auto;
   margin-right: auto;
   margin-top: 200px;
@@ -59,13 +120,36 @@ Text Domain:  twentyseventeenchild
   font-size: 2em;
   display: flex;
   flex-direction: column;
-  /*text-align: center;*/
-}
-
+} */
+/* 
 .call-to-action h1 {
   font-size: 3em;
+} */
+
+@media screen and (min-width: 20em) {
 }
 
-.img-title {
-  display: block;
+@media screen and (min-width: 30em) {
+}
+
+@media screen and (min-width: 48em) {
+  /* .twentyseventeen-front-page.has-header-image .custom-header-media,
+  .twentyseventeen-front-page.has-header-video .custom-header-media,
+  .home.blog.has-header-image .custom-header-media,
+  .home.blog.has-header-video .custom-header-media {
+    height: 75vh;
+    max-height: 100%;
+    overflow: hidden;
+  } */
+
+  .admin-bar.twentyseventeen-front-page.has-header-image .custom-header-media {
+    height: 70vh;
+  }
+}
+@media screen and (min-width: 67em) {
+}
+@media screen and (min-width: 79em) {
+}
+
+@media screen and (max-width: 48.875em) and (min-width: 48em) {
 }
