@@ -30,6 +30,12 @@
 
   <div class="custom-header-media">
     <?php the_custom_header_markup(); ?>
+    <div id="pouet">
+      <?php 
+        $img = wp_get_attachment_image_src(90);
+        echo "<img src=\"$img[0]\" />";
+      ?>
+    </div>
   </div>
 
   <?php //get_template_part('template-parts/header/site', 'branding'); ?>
