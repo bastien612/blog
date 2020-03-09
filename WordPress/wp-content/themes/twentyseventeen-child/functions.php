@@ -20,4 +20,7 @@ function my_theme_enqueue_styles()
       '',
       true
   );
+
+  wp_register_script('gsap3', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js');
+  wp_enqueue_script('gsap3');
 }

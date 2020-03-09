@@ -16,4 +16,24 @@
       oldSelected = selectedItem;
     }
   });
+
+  animatePieces($);
 })(jQuery);
+
+function animatePieces($) {
+  console.log("Animation !!!");
+  console.log("GSAP ? :", gsap);
+  const tl = gsap.timeline();
+  const piece1 = $(".piece1").first();
+  const xLeft = piece1.position().left;
+  console.log("piece1 : ", piece1);
+  console.log("xLeft : ", xLeft);
+  tl.to(".piece1", { x: xLeft + 100, duration: 5, ease: "power4" });
+
+  tl.play();
+}
+
+function movePiece($, pieceName) {
+  const piece = $(pieceName);
+  console.log("GSAP ? :", gsap);
+}
