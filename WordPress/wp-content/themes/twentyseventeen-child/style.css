@@ -144,7 +144,8 @@ footer {
     top: 20%;
     left: 10%;
     z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-bleu-inverse.png");
+    /* background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-bleu-inverse.png"); */
+    background-image: url("http://bimers.fr/wp-content/uploads/2020/03/eclat-bleu-inverse.png");
     background-size: contain;
   }
   .piece2 {
@@ -157,35 +158,38 @@ footer {
     top: 73%;
     left: 15%;
     z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-rouge.png");
+    /* background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-rouge.png"); */
+    background-image: url("http://bimers.fr/wp-content/uploads/2020/03/eclat-rouge.png");
     background-size: contain;
   }
   .piece3 {
-    display: block;
-    width: 138px;
-    height: 96px;
-    margin-top: -69px;
-    margin-left: -48px;
-    position: absolute;
-    top: 84%;
-    left: 86%;
-    z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-bleu.png");
-    background-size: contain;
-  }
-  .piece4 {
     display: block;
     width: 141px;
     height: 103px;
     margin-top: -70px;
     margin-left: -52px;
     position: absolute;
+    top: 84%;
+    left: 86%;
+    z-index: 4;
+    /* background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-vert.png"); */
+    background-image: url("http://bimers.fr/wp-content/uploads/2020/03/eclat-vert-clair.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .piece4 {
+    display: block;
+    width: 138px;
+    height: 96px;
+    margin-top: -69px;
+    margin-left: -48px;
+    position: absolute;
     top: 20%;
     left: 82%;
     z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-vert.png");
+    /* background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-bleu.png"); */
+    background-image: url("http://bimers.fr/wp-content/uploads/2020/03/eclat-bleu.png");
     background-size: contain;
-    background-repeat: no-repeat;
   }
   .piece5 {
     display: block;
@@ -197,24 +201,11 @@ footer {
     top: 32%;
     left: 32%;
     z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-vert-clair.png");
+    /* background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-vert-clair.png"); */
+    background-image: url("http://bimers.fr/wp-content/uploads/2020/03/ecalt-jaune.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
-  /* #masthead .wrap {
-    display: grid;
-    grid-template-rows: 1fr;
-  } */
-  /*
-  .custom-logo-link {
-    grid-column: 1;
-  }
-  .menu-spacing {
-    grid-column: 2 / 3;
-  }
-  .menu-top-menu-container {
-    grid-column: 4 / 6;
-  } */
   .custom-logo-link {
     width: 55px;
   }
