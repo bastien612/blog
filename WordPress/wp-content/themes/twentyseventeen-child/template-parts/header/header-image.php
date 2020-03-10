@@ -13,7 +13,8 @@
 <div class="custom-header">
 
   <div class="custom-header-media">
-    <div class="mon-slogan"></div>
+    <div class="main-cover-logo"></div>
+    <!-- <div class="mon-slogan"></div> -->
     <div class="piece1"></div>
     <div class="piece2"></div>
     <div class="piece3"></div>

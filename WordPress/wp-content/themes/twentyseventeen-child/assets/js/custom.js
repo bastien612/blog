@@ -33,12 +33,9 @@ function animatePieces($) {
 function initTimeLine(piece) {
   const tl = gsap.timeline({ repeat: -1, delay: 0 });
   let sign = Math.random() < 0.5;
-  console.log("pouet : ", sign);
 
   let i;
   for (i = 0; i < 8; i++) {
-    console.log("Add move :", sign);
-    console.log("i: ", i);
     sign ? addMoveUp(tl, piece) : addMoveDown(tl, piece);
     sign = !sign;
   }
