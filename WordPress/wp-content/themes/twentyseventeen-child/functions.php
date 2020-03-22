@@ -15,7 +15,7 @@ function my_theme_enqueue_styles()
 
     wp_enqueue_script(
       'custom',
-      get_bloginfo('stylesheet_directory') . '/assets/js/custom.js',
+      get_bloginfo('stylesheet_directory') . '/assets/js/custom-1.js',
       array('jquery'),
       '',
       true

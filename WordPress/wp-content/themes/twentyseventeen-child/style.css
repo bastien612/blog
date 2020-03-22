@@ -23,7 +23,11 @@ Text Domain:  twentyseventeenchild
   height: 100%;
 }
 
-.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+.has-header-image .custom-header-media img,
+.has-header-video .custom-header-media video,
+.has-header-image:not(.twentyseventeen-front-page):not(.home)
+  .custom-header-media
+  img {
   position: relative;
 }
 
@@ -32,30 +36,13 @@ Text Domain:  twentyseventeenchild
   position: absolute;
   top: 50%;
   left: 50%;
-  background-image: url("http://localhost:8080/wp-content/uploads/2020/03/logo.png");
-  background-image: url("http://bimers.fr/wp-content/uploads/2020/03/logo.png");
+  background-image: url("http://bimers.fr/wp-content/uploads/2020/03/logo-texte.png");
   background-size: contain;
   background-repeat: no-repeat;
-  margin-left: -138px;
-  margin-top: -134px;
-  width: 277px;
-  height: 209px;
-  z-index: 3;
-}
-
-.mon-slogan {
-  display: block;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  margin-top: -100px;
-  margin-left: -200px;
-  background-image: url("http://localhost:8080/wp-content/uploads/2020/03/bimers-police-noir-png.png");
-  background-image: url("http://bimers.fr/wp-content/uploads/2020/03/bimers-police-noir-png.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 200px;
-  width: 400px;
+  margin-left: -155px;
+  margin-top: -157px;
+  width: 311px;
+  height: 315px;
   z-index: 3;
 }
 
@@ -131,24 +118,39 @@ footer {
   font-size: 3em;
 } */
 
-@media screen and (min-width: 20em) {}
+@media screen and (min-width: 20em) {
+}
 
-@media screen and (min-width: 30em) {}
+@media screen and (min-width: 30em) {
+}
 
 @media screen and (min-width: 48em) {
-  .main-cover-logo {
+  #logo-assembling {
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/logo.png");
-    background-image: url("http://bimers.fr/wp-content/uploads/2020/03/logo.png");
-    background-size: contain;
+    width: 350px;
+    height: 296px;
+    top: 32%;
+    left: 48.8%;
+    margin-top: -150px;
+    margin-left: -150px;
+    z-index: 5;
     background-repeat: no-repeat;
-    margin-left: -272px;
-    margin-top: -280px;
-    width: 554px;
-    height: 418px;
+    overflow: visible;
+    /* background-image: url("http://localhost:8080/wp-content/themes/twentyseventeen-child/assets/images/logo_svg.svg"); */
+  }
+
+  .has-header-image.twentyseventeen-front-page .custom-header,
+  .has-header-video.twentyseventeen-front-page .custom-header,
+  .has-header-image.home.blog .custom-header,
+  .has-header-video.home.blog .custom-header {
+    height: 93vh;
+  }
+  .main-cover-logo {
+    margin-left: -311px;
+    margin-top: -315px;
+    width: 622px;
+    height: 630px;
     z-index: 3;
   }
   .piece1 {
@@ -161,7 +163,6 @@ footer {
     top: 20%;
     left: 17%;
     z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-bleu-inverse.png");
     background-image: url("http://bimers.fr/wp-content/uploads/2020/03/eclat-bleu-inverse.png");
     background-size: contain;
   }
@@ -175,7 +176,6 @@ footer {
     top: 73%;
     left: 20%;
     z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-rouge.png");
     background-image: url("http://bimers.fr/wp-content/uploads/2020/03/eclat-rouge.png");
     background-size: contain;
   }
@@ -189,7 +189,6 @@ footer {
     top: 80%;
     left: 82%;
     z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-vert-clair.png");
     background-image: url("http://bimers.fr/wp-content/uploads/2020/03/eclat-vert-clair.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -204,7 +203,6 @@ footer {
     top: 20%;
     left: 90%;
     z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-bleu.png");
     background-image: url("http://bimers.fr/wp-content/uploads/2020/03/eclat-bleu.png");
     background-size: contain;
   }
@@ -218,7 +216,6 @@ footer {
     top: 16%;
     left: 70%;
     z-index: 4;
-    background-image: url("http://localhost:8080/wp-content/uploads/2020/03/eclat-vert.png");
     background-image: url("http://bimers.fr/wp-content/uploads/2020/03/eclat-vert.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -237,8 +234,11 @@ footer {
   }
 }
 
-@media screen and (min-width: 67em) {}
+@media screen and (min-width: 67em) {
+}
 
-@media screen and (min-width: 79em) {}
+@media screen and (min-width: 79em) {
+}
 
-@media screen and (max-width: 48.875em) and (min-width: 48em) {}
+@media screen and (max-width: 48.875em) and (min-width: 48em) {
+}

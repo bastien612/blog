@@ -1,4 +1,32 @@
 (function($) {
+  colorMenu($);
+  animatePieces($);
+  assembleLogo($);
+})(jQuery);
+
+function assembleLogo($) {
+  var tl = new TimelineLite();
+  console.log("assembleLogo");
+  console.log("$('polygon')", $("polygon"));
+  $("polygon").each(function(index, el) {
+    console.log("index : ", index);
+    tl.to(el, {
+      x: rndPosNeg() * (index * 0.5),
+      y: rndPosNeg() * (index * 0.5),
+      rotation: rndPosNeg() * 720,
+      scale: rndPosNeg() * 5,
+      ease: Power4.easeInOut,
+      transformOrigin: "center center"
+    });
+    tl.play();
+  });
+}
+
+function rndPosNeg() {
+  return Math.random() * 2 - 1;
+}
+
+function colorMenu($) {
   let oldSelected = undefined;
   const tabsName = ["home", "action", "member", "news", "contact"];
   const selectedItem = $(".current_page_item");
@@ -16,13 +44,9 @@
       oldSelected = selectedItem;
     }
   });
-
-  animatePieces($);
-})(jQuery);
+}
 
 function animatePieces($) {
-  console.log("Animation !!!");
-
   initTimeLine(".piece1");
   initTimeLine(".piece2");
   initTimeLine(".piece3");
@@ -64,8 +88,7 @@ function addMoveDown(timeline, name) {
 function addMove(timeline, name, ySign) {
   const x = calcNewX();
   const y = calcNewY();
-  const duration = getRandBetween(5, 8);
-  // console.log(`x: ${x}, y: ${y} , duration: ${duration}`);
+  const duration = getRandBetween(3, 6);
 
   timeline.to(name, {
     x: x,
@@ -80,7 +103,7 @@ function calcNewX() {
 }
 
 function calcNewY() {
-  return getRandBetween(10, 15);
+  return getRandBetween(15, 35);
 }
 
 function calcNewCoord(min, max) {
