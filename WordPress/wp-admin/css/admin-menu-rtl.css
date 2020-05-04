@@ -1,3 +1,4 @@
+/*! This file is auto-generated */
 #adminmenuback,
 #adminmenuwrap,
 #adminmenu,
@@ -11,6 +12,15 @@
 	top: 0;
 	bottom: -120px;
 	z-index: 1; /* positive z-index to avoid elastic scrolling woes in Safari */
+}
+
+.php-error #adminmenuback {
+	position: absolute;
+}
+
+.php-error #adminmenuback,
+.php-error #adminmenuwrap {
+	margin-top: 2em;
 }
 
 #adminmenu {

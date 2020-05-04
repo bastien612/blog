@@ -40,8 +40,10 @@ final class WP_oEmbed_Controller {
 					'callback' => array( $this, 'get_item' ),
 					'args'     => array(
 						'url'      => array(
-							'required'          => true,
-							'sanitize_callback' => 'esc_url_raw',
+							'description' => __( 'The URL of the resource for which to fetch oEmbed data.' ),
+							'required'    => true,
+							'type'        => 'string',
+							'format'      => 'uri',
 						),
 						'format'   => array(
 							'default'           => 'json',
@@ -66,10 +68,10 @@ final class WP_oEmbed_Controller {
 					'permission_callback' => array( $this, 'get_proxy_item_permissions_check' ),
 					'args'                => array(
 						'url'       => array(
-							'description'       => __( 'The URL of the resource for which to fetch oEmbed data.' ),
-							'type'              => 'string',
-							'required'          => true,
-							'sanitize_callback' => 'esc_url_raw',
+							'description' => __( 'The URL of the resource for which to fetch oEmbed data.' ),
+							'required'    => true,
+							'type'        => 'string',
+							'format'      => 'uri',
 						),
 						'format'    => array(
 							'description' => __( 'The oEmbed format to use.' ),
@@ -110,7 +112,7 @@ final class WP_oEmbed_Controller {
 	 * @since 4.4.0
 	 *
 	 * @param WP_REST_Request $request Full data about the request.
-	 * @return WP_Error|array oEmbed response data or WP_Error on failure.
+	 * @return array|WP_Error oEmbed response data or WP_Error on failure.
 	 */
 	public function get_item( $request ) {
 		$post_id = url_to_postid( $request['url'] );
