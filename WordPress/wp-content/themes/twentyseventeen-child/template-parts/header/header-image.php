@@ -43,12 +43,13 @@
         <polygon class="cls-21" points="165.67 0 174 61.88 167 86.88 165.67 0"/>
       </svg>
     <!-- </div> -->
-    <!-- <div class="main-cover-logo"></div> -->
+    <div class="main-cover-logo"></div>
     <div class="piece1"></div>
     <div class="piece2"></div>
     <div class="piece3"></div>
     <div class="piece4"></div>
     <div class="piece5"></div>
+    <div class="piece6"></div>
     <?php the_custom_header_markup(); ?>
   </div>
 

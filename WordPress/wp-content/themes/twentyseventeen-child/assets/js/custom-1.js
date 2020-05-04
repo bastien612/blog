@@ -1,29 +1,77 @@
 (function($) {
   colorMenu($);
-  animatePieces($);
-  assembleLogo($);
+
+  console.log("window.screen.width:", window.screen.height);
+  console.log("window.devicePixelRatio:", window.devicePixelRatio);
+  console.log("$(window).width():", $(window).width());
+  console.log("$(window).height():", $(window).height());
+
+  if ($(window).width() > 750) {
+    animatePieces($);
+    assembleLogo($);
+  }
 })(jQuery);
 
 function assembleLogo($) {
+  console.log("Animaton logo");
   var tl = new TimelineLite();
-  console.log("assembleLogo");
-  console.log("$('polygon')", $("polygon"));
-  $("polygon").each(function(index, el) {
-    console.log("index : ", index);
-    tl.to(el, {
-      x: rndPosNeg() * (index * 0.5),
-      y: rndPosNeg() * (index * 0.5),
-      rotation: rndPosNeg() * 720,
-      scale: rndPosNeg() * 5,
-      ease: Power4.easeInOut,
-      transformOrigin: "center center"
-    });
-    tl.play();
+  const mainLogo = $(".main-cover-logo").first();
+
+  tl.set("#logo-assembling", {
+    opacity: 0.8
   });
+
+  $("polygon").each(function(index, el) {
+    tl.from(
+      el,
+      {
+        x: rndShardCoord(400, 800),
+        y: rndShardCoord(400, 800),
+        rotation: rndShardCoord(1, 2) * 360,
+        scale: rndShardCoord(1, 2) * 2,
+        ease: "power4.out",
+        transformOrigin: "center center",
+        duration: 2
+      },
+      "polygon"
+    );
+
+    tl.to(
+      el,
+      {
+        autoAlpha: 0,
+        duration: 1
+      },
+      "fade"
+    );
+  });
+  tl.from(
+    mainLogo,
+    {
+      opacity: 0,
+      duration: 1
+    },
+    "fade"
+  );
+  // tl.reverse(3);
+  tl.play();
+}
+
+function getRandWithSignBetween(absoluteMin, absoluteMax) {
+  const amplitude = absoluteMax - absoluteMin;
+  const value = Math.floor(rndPosNeg() * amplitude);
+  return min + value;
 }
 
 function rndPosNeg() {
   return Math.random() * 2 - 1;
+}
+function rndShardCoord(absoluteMin, absoluteMax) {
+  const amplitude = absoluteMax - absoluteMin;
+  const rndSign = rndPosNeg();
+  return rndSign > 0
+    ? absoluteMin + rndSign * amplitude
+    : -absoluteMin - rndSign * amplitude;
 }
 
 function colorMenu($) {
@@ -52,6 +100,7 @@ function animatePieces($) {
   initTimeLine(".piece3");
   initTimeLine(".piece4");
   initTimeLine(".piece5");
+  initTimeLine(".piece6");
 }
 
 function initTimeLine(piece) {
