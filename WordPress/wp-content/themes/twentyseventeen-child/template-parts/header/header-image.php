@@ -14,7 +14,6 @@
 
   <div class="custom-header-media">
 
-    <!-- <div class="logo-assembling-frame"> -->
       <svg id="logo-assembling" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236.33 201.88">
         <defs>
           <style>.cls-1{fill:#438997;}.cls-2{fill:#278e74;}.cls-3{fill:#e4ce1a;}.cls-4{fill:#96ceb3;}.cls-5{fill:#012632;}.cls-6{fill:#3a9caa;}.cls-7{fill:#009f65;}.cls-8{fill:#4ba4b0;}.cls-9{fill:#8eced3;}.cls-10{fill:#fef4a0;}.cls-11{fill:#fae770;}.cls-12{fill:#e5ce19;}.cls-13{fill:#fef4a3;}.cls-14{fill:#aa4417;}.cls-15{fill:#ea7605;}.cls-16{fill:#3c8593;}.cls-17{fill:#35a474;}.cls-18{fill:#a3d3b9;}.cls-19{fill:#f49916;}.cls-20{fill:#c85b16;}.cls-21{fill:#86cace;}</style>

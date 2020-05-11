@@ -1,10 +1,5 @@
-(function($) {
+(function ($) {
   colorMenu($);
-
-  console.log("window.screen.width:", window.screen.height);
-  console.log("window.devicePixelRatio:", window.devicePixelRatio);
-  console.log("$(window).width():", $(window).width());
-  console.log("$(window).height():", $(window).height());
 
   if ($(window).width() > 750) {
     animatePieces($);
@@ -13,15 +8,14 @@
 })(jQuery);
 
 function assembleLogo($) {
-  console.log("Animaton logo");
   var tl = new TimelineLite();
   const mainLogo = $(".main-cover-logo").first();
 
   tl.set("#logo-assembling", {
-    opacity: 0.8
+    opacity: 0.8,
   });
 
-  $("polygon").each(function(index, el) {
+  $("polygon").each(function (index, el) {
     tl.from(
       el,
       {
@@ -31,7 +25,7 @@ function assembleLogo($) {
         scale: rndShardCoord(1, 2) * 2,
         ease: "power4.out",
         transformOrigin: "center center",
-        duration: 2
+        duration: 2,
       },
       "polygon"
     );
@@ -40,7 +34,7 @@ function assembleLogo($) {
       el,
       {
         autoAlpha: 0,
-        duration: 1
+        duration: 1,
       },
       "fade"
     );
@@ -49,11 +43,10 @@ function assembleLogo($) {
     mainLogo,
     {
       opacity: 0,
-      duration: 1
+      duration: 1,
     },
     "fade"
   );
-  // tl.reverse(3);
   tl.play();
 }
 
@@ -79,11 +72,11 @@ function colorMenu($) {
   const tabsName = ["home", "action", "member", "news", "contact"];
   const selectedItem = $(".current_page_item");
   const tabs = [];
-  tabsName.forEach(itemName =>
+  tabsName.forEach((itemName) =>
     tabs.push([itemName, $(".menu-" + itemName + "-link")])
   );
 
-  tabs.forEach(element => {
+  tabs.forEach((element) => {
     if (selectedItem.text() == element[1].text()) {
       selectedItem.addClass("selected-" + element[0] + "-link");
       if (oldSelected) {
@@ -122,7 +115,7 @@ function addMoveToStartingPlace(timeline, name) {
     x: 0,
     y: 0,
     duration: 6,
-    ease: "power1.inOut"
+    ease: "power1.inOut",
   });
 }
 
@@ -143,7 +136,7 @@ function addMove(timeline, name, ySign) {
     x: x,
     y: ySign ? y : -y,
     duration: duration,
-    ease: "power1.inOut"
+    ease: "power1.inOut",
   });
 }
 
