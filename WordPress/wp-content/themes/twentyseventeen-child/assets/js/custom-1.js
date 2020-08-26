@@ -1,6 +1,7 @@
 (function ($) {
   colorMenu($);
 
+  console.log("Start");
   if ($(window).width() > 750) {
     animatePieces($);
     assembleLogo($);
